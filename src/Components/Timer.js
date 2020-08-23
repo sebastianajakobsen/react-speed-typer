@@ -1,9 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
-function Timer({gameOver}) {
-
-
-    const [timeLeft, setTimeLeft] = useState( 10)
+function Timer({gameOver, timeLeft, setTimeLeft}) {
 
     useEffect(() => {
         // exit early when we reach 0
@@ -21,7 +18,7 @@ function Timer({gameOver}) {
         return () => clearInterval(timeInterval);
         // add timeLeft as a dependency to re-rerun the effect
         // when we update it
-    }, [timeLeft, gameOver]);
+    }, [timeLeft, setTimeLeft, gameOver]);
 
     return (
 
