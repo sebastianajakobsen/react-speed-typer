@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Timer from "./Components/Timer";
 
 
 function App() {
@@ -30,10 +31,8 @@ function App() {
 
 
     return (
-        <div className="text-4xl">
-            hello world
-            {timeLeft}
-
+        <div>
+            <Timer timeLeft={timeLeft}/>
         </div>
     );
 }
