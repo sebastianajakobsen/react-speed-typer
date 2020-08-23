@@ -9,12 +9,13 @@ function App() {
         'steer', 'silver', 'highfalutin', 'superficial', 'quince', 'eight', 'feeble', 'admit',
         'drag', 'loving'
     ])
+
     const [timeLeft, setTimeLeft] = useState( 10)
-
-
     useEffect(() => {
         // exit early when we reach 0
-        if (!timeLeft) return;
+        if (!timeLeft) {
+           return gameOver();
+        }
 
         // save intervalId to clear the interval when the
         // component re-renders
@@ -29,6 +30,9 @@ function App() {
     }, [timeLeft]);
 
 
+    function gameOver() {
+      console.log('game over')
+    }
 
     return (
         <div>
