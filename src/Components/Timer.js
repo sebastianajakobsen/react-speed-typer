@@ -8,7 +8,7 @@ function Timer({gameOver}) {
     useEffect(() => {
         // exit early when we reach 0
         if (!timeLeft) {
-            gameOver();
+           return gameOver();
         }
 
         // save intervalId to clear the interval when the
