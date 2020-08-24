@@ -35,7 +35,7 @@ function TypingForm({words, newWord, setNewWord, gameOver, updateScoreAndWord}) 
         <div className="text-center my-4">
             <p className="leading-none">Type the following:</p>
             <h1 className="text-4xl font-medium ">{randomWord}</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autoComplete="off" >
                 <input name="typeWord" onChange={handleInputChange} value={typeWord} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text"/>
             </form>
 
