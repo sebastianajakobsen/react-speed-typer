@@ -45,7 +45,7 @@ function App() {
                     <>
                     <div className="flex justify-between my-2 text-lg">
                         <Timer setTimeLeft={setTimeLeft} timeLeft={timeLeft} gameOver={gameOver} setGameOver={setGameOver}/>
-                        <div>{score}</div>
+                        <div>Score: {score}</div>
                     </div>
 
                     <div>
